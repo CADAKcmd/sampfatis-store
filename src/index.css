@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional arimo-<uniquifier> if you want a custom class: */
+/* .arimo-xyz { font-family: "Arimo", sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; } */
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body { @apply font-arimo bg-gradient-to-b from-purple-50 to-white text-gray-800; }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full px-4 py-2 md:px-6 md:py-3 text-sm md:text-base 
+    font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 
+    focus-visible:ring-brand-gold focus-visible:ring-offset-2;
+  }
+  .btn-primary {
+    @apply bg-brand-purple text-white hover:brightness-110 hover:-translate-y-0.5 shadow-lg;
+  }
+  .btn-outline {
+    @apply border border-brand-purple text-brand-purple hover:bg-brand-purple hover:text-white;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full bg-brand-gold/20 text-brand-purple px-2.5 py-1 text-xs font-medium;
+  }
+  .card {
+    @apply bg-white/90 backdrop-blur rounded-2xl shadow-md ring-1 ring-purple-100 hover:shadow-xl transition;
+  }
+}
