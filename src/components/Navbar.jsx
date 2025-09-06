@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from '/assets/logo.png' // <-- add this (adjust path if needed)
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -16,8 +15,8 @@ export default function Navbar() {
           <NavLink to="/" className="flex items-center gap-2 group">
             <div className="h-10 w-10 md:h-11 md:w-11 rounded-2xl bg-white ring-2 ring-brand-gold/70 overflow-hidden grid place-items-center shadow-sm animate-float">
               <img
-                src={logo}
-                alt="Naija Food Store logo"
+                src='public\assets\Logo.png'
+                alt="Sampfatis Foods logo"
                 className="h-8 w-8 md:h-9 md:w-9 object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -52,7 +51,11 @@ export default function Navbar() {
               <NavLink onClick={() => setOpen(false)} to="/" className={active}>Home</NavLink>
               <NavLink onClick={() => setOpen(false)} to="/shop" className={active}>Shop</NavLink>
               <NavLink onClick={() => setOpen(false)} to="/about" className={active}>About</NavLink>
-              <NavLink onClick={() => setOpen(false)} to="/contact" className={`${linkBase} border border-brand-purple text-brand-purple`}>
+              <NavLink
+                onClick={() => setOpen(false)}
+                to="/contact"
+                className={`${linkBase} border border-brand-purple text-brand-purple`}
+              >
                 Contact
               </NavLink>
             </div>
