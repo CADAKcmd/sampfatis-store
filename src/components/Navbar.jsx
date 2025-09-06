@@ -15,7 +15,7 @@ export default function Navbar() {
           <NavLink to="/" className="flex items-center gap-2 group">
             <div className="h-10 w-10 md:h-11 md:w-11 rounded-2xl bg-white ring-2 ring-brand-gold/70 overflow-hidden grid place-items-center shadow-sm animate-float">
               <img
-                src='/assets/Logo.png'
+                src='src/assets/Logo.png'
                 alt="Sampfatis Foods logo"
                 className="h-8 w-8 md:h-9 md:w-9 object-contain transition-transform duration-300 group-hover:scale-105"
               />
